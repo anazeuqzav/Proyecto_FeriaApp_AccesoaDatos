@@ -38,6 +38,14 @@ public class CasetaFeria {
         this.tipoCaseta = tipoCaseta;
     }
 
+    public CasetaFeria(int id, String nombre, String titular, int aforo, String tipoCaseta) {
+        this.id = id;
+        this.nombre = nombre;
+        this.titular = titular;
+        this.aforo = aforo;
+        this.tipoCaseta = tipoCaseta;
+    }
+
     // Getters y setters
     public int getId() {
         return id;

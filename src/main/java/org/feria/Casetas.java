@@ -1,5 +1,7 @@
 package org.feria;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.BufferedReader;
@@ -10,6 +12,7 @@ import java.util.ArrayList;
 import static java.lang.Integer.parseInt;
 
 @XmlRootElement(name = "casetas")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Casetas {
 
     // Atributos
@@ -19,7 +22,6 @@ public class Casetas {
     // Constructor
     public Casetas() {
     }
-
     public Casetas(ArrayList<CasetaFeria> listaCasetas) {
         this.listaCasetas = listaCasetas;
     }

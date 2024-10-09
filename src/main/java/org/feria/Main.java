@@ -14,14 +14,13 @@ public class Main {
         int opcion;
         int id;
 
-        boolean marshallingXML = false;
-        boolean marshalingJSON = false;
+        boolean marshallingXML = false; // control de que se ha realizado el marshalling XML
+        boolean marshalingJSON = false; // control de que se ha realizado el marshalling JSON
 
         Casetas casetas = new Casetas(recuperaCasetas(archivoCasetas));
 
-        System.out.println(casetas);
-
-        //Menú
+        do{
+            //Menú
             System.out.println("""
                  _____________________________________________
                 |            CASETAS FERIA DE JAÉN            |
@@ -46,16 +45,20 @@ public class Main {
                     if(marshallingXML){
                         unmarshallingCasetasXML("casetas.xml");
                     } else {
-                        System.out.println("No se puede realizar unmarshalling a XML porqué no ha hecho antes " +
+                        System.out.println("No se puede realizar unmarshalling a XML por que no ha hecho antes " +
                                 "marshalling a XML");
                     }
                     break;
                 case 3:
-                    System.out.println("Introduce el ID que quieras buscar: ");
-                    id = sc.nextInt();
-                    //buscarCasetaIDXML("casetas.xml", id);
-
-
+                    if (marshallingXML){
+                        System.out.println("Introduce el ID que quieras buscar: ");
+                        id = sc.nextInt();
+                        String casetaXML = buscarCasetaIDXML("casetas.xml", id);
+                        unmarshallingCasetaXMLString(casetaXML);
+                    } else {
+                        System.out.println("No se puede recuperar una caseta por que no se ha hecho antes" +
+                                "marshalling a XML");
+                    }
                     break;
                 case 4:
                     marshalingCasetasJSON(casetas);
@@ -79,6 +82,7 @@ public class Main {
                     System.out.println("Introduce un número de 1 al 6 para elegir una opción");
             }
 
+        } while (opcion !=7);
 
     }
 }

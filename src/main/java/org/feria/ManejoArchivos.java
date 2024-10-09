@@ -129,7 +129,60 @@ public class ManejoArchivos {
         }
     }
 
-    /*public static CasetaFeria buscarCasetaIDXML(String archivo, int id) {
+    public static String buscarCasetaIDXML(String archivo, int id) {
+        StringBuilder datosCaseta = new StringBuilder();
+        boolean idEncontrado = false; // controla que se ha encontrado el ID
 
-    }*/
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+            String linea;
+
+            // Lee el archivo xml linea por linea
+            while ((linea = br.readLine()) != null) {
+                // Si encuentra el id introducido
+                if (linea.contains("id=" + "\"" + id + "\"")) {
+                    idEncontrado = true;
+                    // Agrega la etiqueta de apertura del elemento raiz
+                    datosCaseta.append("<casetas>\n");
+                    datosCaseta.append(linea).append("\n");
+                    // Guarda las líneas correspondientes a los datos de la caseta
+                    for (int i = 0; i < 5; i++) {
+                        linea = br.readLine();
+                        datosCaseta.append(linea).append("\n");
+                    }
+                }
+            }
+            // Agrega la etiqueta de cierre del elemento raiz
+            datosCaseta.append("</casetas>");
+
+            if (!idEncontrado) {
+                return "No se encontró ninguna caseta con el ID " + id;
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+        }
+        return datosCaseta.toString();
+    }
+
+    public static void unmarshallingCasetaXMLString(String casetaXML){
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Casetas.class);
+
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+
+            // Usamos un StringReader en lugar de un archivo para leer la cadena XML
+            StringReader reader = new StringReader(casetaXML);
+
+            Casetas casetasFromXml = (Casetas) unmarshaller.unmarshal(reader);
+
+            // Mostramos el objeto recuperado del XML
+            System.out.println("Objeto Casetas después de deserializar:");
+            System.out.println(casetasFromXml.toString());
+
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
