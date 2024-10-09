@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="902bcc93-5044-44d6-b898-dc3ff860c2fb" name="Changes" comment="actualizacion">
+    <list default="true" id="902bcc93-5044-44d6-b898-dc3ff860c2fb" name="Changes" comment="Funcionalidad opcion 3 Menú">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/CasetaFeria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/CasetaFeria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/Casetas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/Casetas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/ManejoArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/ManejoArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/CasetaFeria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/feria/CasetaFeria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/Casetas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/feria/Casetas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/feria/ManejoArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/feria/manejoArchivos/ManejoArchivos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +55,19 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;G:/Mi unidad/CFGS DAM/Segundo/Acceso a datos/FeriaApp&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/tarde/Desktop/DAM/Acceso a datos/FeriaApp/src/main/java/org/example/Main.java&quot;
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/tarde/Desktop/DAM/Acceso a datos/FeriaApp/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.feria.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.feria.main.Main" />
       <module name="FeriaApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.feria.*" />
+          <option name="PATTERN" value="org.feria.feria.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,11 +98,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728413623418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Funcionalidad opcion 3 Menú">
+      <option name="closed" value="true" />
+      <created>1728464087128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728464087128</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="actualizacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion" />
+    <MESSAGE value="Funcionalidad opcion 3 Menú" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funcionalidad opcion 3 Menú" />
   </component>
 </project>

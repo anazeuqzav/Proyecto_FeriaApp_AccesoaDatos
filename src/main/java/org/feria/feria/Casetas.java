@@ -1,16 +1,18 @@
-package org.feria;
+package org.feria.feria;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * Clase que contiene un arrayList de objetos casetasFeria
+ *
+ * @author Ana Vázquez
+ */
 @XmlRootElement(name = "casetas")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Casetas {
@@ -35,6 +37,7 @@ public class Casetas {
         this.listaCasetas = listaCasetas;
     }
 
+    // Métodos
     @Override
     public String toString() {
         StringBuilder datosCaseta = new StringBuilder();
@@ -43,6 +46,4 @@ public class Casetas {
         }
         return datosCaseta.toString();
     }
-
-
 }

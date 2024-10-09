@@ -1,7 +1,12 @@
-package org.feria;
+package org.feria.feria;
 
 import javax.xml.bind.annotation.*;
 
+/**
+ * Clase que representa una caseta de feria con sus propiedades
+ *
+ * @author Ana Vázquez
+ */
 @XmlAccessorType(XmlAccessType.FIELD) // Acceder por campo casi siempre será asi
 @XmlType(propOrder = { "id", "nombre", "titular", "aforo", "tipoCaseta" })
 public class CasetaFeria {
@@ -32,14 +37,6 @@ public class CasetaFeria {
 
     public CasetaFeria(String nombre, String titular, int aforo, String tipoCaseta) {
         this.id = contador++;
-        this.nombre = nombre;
-        this.titular = titular;
-        this.aforo = aforo;
-        this.tipoCaseta = tipoCaseta;
-    }
-
-    public CasetaFeria(int id, String nombre, String titular, int aforo, String tipoCaseta) {
-        this.id = id;
         this.nombre = nombre;
         this.titular = titular;
         this.aforo = aforo;
@@ -101,10 +98,10 @@ public class CasetaFeria {
                         formatearLinea("Tipo", this.tipoCaseta) + "\n" +
                 "      |_________________________________|";
     }
-    // Función para alinear los textos
+
+    // Función para alinear los textos dentro del toString
     String formatearLinea(String etiqueta, String valor) {
         int espaciosRestantes = 30 - etiqueta.length() - valor.length();
         return "      | " + etiqueta + ": " + valor + " ".repeat(espaciosRestantes) + "|";
     }
-
 }
