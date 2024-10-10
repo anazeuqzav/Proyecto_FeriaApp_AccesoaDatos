@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.*;
 
 /**
  * Clase que representa una caseta de feria con sus propiedades
- *
  * @author Ana Vázquez
+ * @version 09/10/24
  */
-@XmlAccessorType(XmlAccessType.FIELD) // Acceder por campo casi siempre será asi
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "id", "nombre", "titular", "aforo", "tipoCaseta" })
 public class CasetaFeria {
 
@@ -99,9 +99,15 @@ public class CasetaFeria {
                 "      |_________________________________|";
     }
 
-    // Función para alinear los textos dentro del toString
-    String formatearLinea(String etiqueta, String valor) {
-        int espaciosRestantes = 30 - etiqueta.length() - valor.length();
-        return "      | " + etiqueta + ": " + valor + " ".repeat(espaciosRestantes) + "|";
+    /**
+     * Metodo para formatear las líneas de toString
+     * @param atributo El nombre de cada atributo
+     * @param valor El campo de cada atributo
+     * @return Una cadena con la línea formateada según lo que ocupa el atributo y el valor y los espacios restantes
+     * que le quedan a la caseta
+     */
+    private String formatearLinea(String atributo, String valor) {
+        int espaciosRestantes = 30 - atributo.length() - valor.length();
+        return "      | " + atributo + ": " + valor + " ".repeat(espaciosRestantes) + "|";
     }
 }
